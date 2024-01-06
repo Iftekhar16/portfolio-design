@@ -1,0 +1,223 @@
+@font-face{
+    font-family: 'fogthree';
+    src: url(Fogthree.ttf);
+}
+
+@font-face{
+    font-family: 'fogthreeACL';
+    src: url(FogthreeACL.ttf);
+}
+
+.title{
+    font-family: 'fogthreeACL';
+}
+
+body{
+    font-family: 'fogthree';
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.4rem;
+    /* width: 0rem; */
+    /* height: 0.3rem; */
+}
+
+/* .scrollable-div::-webkit-scrollbar {
+    position: absolute;
+    right: 5rem;
+    margin-left: 5rem;
+} */
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(47, 49, 53, 0);
+    /* background: rgb(17, 24, 39); */
+    /* border-radius: 10px; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #2A2A2A;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #505050;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg: #EAEAEA;
+    --text: #2A2A2A;
+}
+
+
+/* sm */
+.title{
+    font-size: 60px;
+    line-height: 250px;
+}
+.subtitle1{
+    font-size: 40px;
+    line-height: 60px;
+}
+.subtitle2{
+    font-size: 30px;
+    line-height: 40px;
+}
+.subtitle3{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* md */
+@media (min-width: 768px) {
+    .title{
+        font-size: 60px;
+        line-height: 250px;
+    }
+    .subtitle1{
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .subtitle2{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .subtitle3{
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+/* lg */
+@media (min-width: 1024px) {
+    .title{
+        font-size: 150px;
+        line-height: 250px;
+    }
+    .subtitle1{
+        font-size: 50px;
+        line-height: 60px;
+    }
+    .subtitle2{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .subtitle3{
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------
+loader
+--------------------------------------------------------------------------------------------------------------------------------------- */
+@keyframes loaderRotate{
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate:360deg;
+    }
+}
+.loader-svg{
+    animation: loaderRotate 3s infinite linear;
+}
+.loader-container{
+    /* transition-property: translate;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out; */
+    transition: 1s ease-in-out;
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------
+hero
+--------------------------------------------------------------------------------------------------------------------------------------- */
+
+@keyframes blobRotate1{
+    0%{
+        transform: rotate(0);
+        scale: 50%;
+    }
+    50%{
+        /* transform: rotate(360deg); */
+        scale: 70%;
+    }
+    100%{
+        transform: rotate(360deg);
+        scale: 50%;
+    }
+}
+.blobRotate1{
+    animation: blobRotate1 10s infinite linear;
+}
+@keyframes blobRotate2{
+    0%{
+        transform: rotate(0);
+        scale: 50%;
+    }
+    50%{
+        /* transform: rotate(360deg); */
+        scale: 70%;
+    }
+    100%{
+        transform: rotate(360deg);
+        scale: 50%;
+    }
+}
+.blobRotate2{
+    animation: blobRotate2 5s infinite ease;
+}
+@keyframes blobRotate3{
+    0%{
+        transform: rotate(0);
+        scale: 70%;
+    }
+    50%{
+        transform: rotate(360deg);
+        scale: 100%;
+    }
+    100%{
+        transform: rotate(0);
+        scale: 70%;
+    }
+}
+.blobRotate3{
+    animation: blobRotate3 7s infinite ease-in-out;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------
+works
+--------------------------------------------------------------------------------------------------------------------------------------- */
+
+.works-cards-container{
+    transition: 0.7s;
+}
+
+@media (min-width: 768px) {
+    .work-card:hover .card-link-container{
+        visibility: visible;
+        opacity: 1;
+        transition: 150ms;
+    }
+}
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------
+designs
+--------------------------------------------------------------------------------------------------------------------------------------- */
+.designs-cards-container{
+    transition: 0.7s;
+}
+
+@media (min-width: 768px) {
+    .design-card:hover .card-link-container{
+        visibility: visible;
+        opacity: 1;
+        transition: 150ms;
+    }
+}

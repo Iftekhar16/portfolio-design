@@ -1,0 +1,433 @@
+---
+import '../css/style.css';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- favicon -->
+    <link href="favicon-light.png" rel="icon" media="(prefers-color-scheme: light)"/>
+    <link href="favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)"/>
+	<!-- iconify -->
+	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+	<title>Hi!</title>
+</head>
+<body class="body bg-bg text-text h-[100svh] overflow-hidden">
+
+	<!-- ---------------------------------------------------------------------------------------------------------------------------------------
+	loader
+	--------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+	<div class="loader-container text-[150px] leading-[150px] w-[100svw] h-[100svh] fixed top-0 bg-bg flex flex-col justify-center items-center z-50">
+		<div class="text-upper w-52 flex items-center gap-2">
+			<div class="">L</div>
+			<div class="loader-svg">
+				<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+					<circle cx="103.508" cy="62.008" r="16.0827" transform="rotate(90 103.508 62.008)" fill="#2A2A2A"/>
+					<circle cx="87.2876" cy="95.7158" r="16.0827" transform="rotate(141.25 87.2876 95.7158)" fill="#2A2A2A"/>
+					<circle cx="50.612" cy="104.029" r="16.0827" transform="rotate(-167.015 50.612 104.029)" fill="#2A2A2A"/>
+					<circle cx="21.4662" cy="80.6382" r="16.0827" transform="rotate(-115.7 21.4662 80.6382)" fill="#2A2A2A"/>
+					<circle cx="21.6179" cy="43.0645" r="16.0827" transform="rotate(-63.8741 21.6179 43.0645)" fill="#2A2A2A"/>
+					<circle cx="50.824" cy="19.938" r="16.0827" transform="rotate(-12.5483 50.824 19.938)" fill="#2A2A2A"/>
+					<circle cx="87.5463" cy="28.5082" r="16.0827" transform="rotate(39.1669 87.5463 28.5082)" fill="#2A2A2A"/>
+				</svg>
+			</div>
+		</div>
+		<div class="text-lower w-52">AD<br>ING</div>
+	</div>
+
+
+	<!-- ---------------------------------------------------------------------------------------------------------------------------------------
+	hero
+	--------------------------------------------------------------------------------------------------------------------------------------- -->
+	<div class="hero-container h-[75svh] md:h-[100svh] flex flex-col justify-center">
+
+		<div class="wrapper md:max-w-[1200px] mx-auto flex flex-col justify-center items-center relative">
+			<div class="blobs-container absolute w-full h-[200svh] flex justify-center items-center overflow-x-hidden blur-[100px]">
+				<div class="blobRotate1 blob1 absolute left-0 md:-left-32 w-[300px] md:w-[700px] h-[200px] md:h-[400px] rounded-full bg-[#E85CFF] opacity-50"></div>
+				<div class="blobRotate2 blob2 absolute right-0 md:-right-32 w-[300px] md:w-[700px] h-[200px] md:h-[400px] rounded-full bg-[#E85CFF] opacity-50"></div>
+				<div class="blobRotate3 blob3 absolute w-[300px] md:w-[500px] h-[300px] md:h-[500px] rounded-xl bg-[#ff7081] opacity-50"></div>
+			</div>
+
+			<div class="relative">
+
+				<div class="flex items-center justify-center gap-3">
+					<div class="line h-[2px] w-full bg-text"></div>
+					<div class="subtitle2 md:text-[50px]">muhammad</div>
+					<div class="line h-[2px] w-full bg-text"></div>
+				</div>
+
+				<div class="hero-name-main text-center text-[50px] md:text-[150px] leading-[50px] md:leading-[130px] mb-2 md:mb-5">Iftekhar Hossain</div>
+				<div class="hero-btn-container w-full flex justify-center">
+					<button class="btn-hero text-[20px] md:text-[30px] leading-[20px] md:leading-[40px] border-text hover:bg-text hover:text-bg active:translate-y-1 active:scale-95 transition border-2 px-5 h-10 md:h-16 flex justify-center items-center">get in touch</button>
+				</div>
+
+				<div class="star-container stroke-[7] md:stroke-2 w-10 md:w-32 h-10 md:h-32 absolute -top-5 md:-top-20 -left-10 md:-left-28">
+					<svg  stroke="#2A2A2A" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+				</div>
+				<div class="star-container stroke-[7] md:stroke-2 w-14 h-14 md:w-48 md:h-48 absolute bottom-0 md:-bottom-10 -right-10 md:-right-36">
+					<svg  stroke="#2A2A2A" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!-- ---------------------------------------------------------------------------------------------------------------------------------------
+	about
+	--------------------------------------------------------------------------------------------------------------------------------------- -->
+	
+	
+	<div class="about-container mb-40">
+		<div class="wrapper md:max-w-[1200px] px-5 md:px-0 mx-auto">
+			<div class="title w-fit relative">
+				<div class="title">about me</div>
+				<div class="text-underline w-full h-[2px] bg-text absolute top-44"></div>
+			</div>
+			<div class="about-description-container w-full flex flex-col items-end">
+				<div class="subtitle1 text-right md:w-[70%] mb-5">heya!<br>Welcome to my portfolio.</div>
+				<div class="subtitle2 text-right md:w-[70%]">I'm a designer and a front end web developer. Though I am pretty confident on my ability to design websites and apps, I will straight up admit that I have a lot to learn. So, I am constantly learning new stuff all the time. Oh and, if we end up working together, please stop me when I end up wasting 2 hours figuring out why a div won't center itself.</div>
+				<!-- <div class="about-description text-right text-[30px] leading-[60px] w-[70%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minus dignissimos sed. Eos, ducimus mollitia? Doloribus recusandae, inventore, tenetur eveniet quisquam architecto minus, hic dolorum qui atque odit quibusdam sint.</div> -->
+			</div>
+		</div>
+	</div>
+
+	<!-- ---------------------------------------------------------------------------------------------------------------------------------------
+	skills
+	--------------------------------------------------------------------------------------------------------------------------------------- -->
+	
+	
+	<div class="skills-container mb-5">
+		<div class="wrapper p-5 md:p-0 md:max-w-[1200px] mx-auto md:flex md:flex-row-reverse md:justify-between gap-20">
+			<div class="title w-fit relative">
+				<div class="text title">skills</div>
+				<div class="text-underline w-full h-[2px] bg-black absolute top-44"></div>
+			</div>
+			<div class="skills-grid-container w-full grid grid-cols-1 md:grid-cols-2 gap-3">
+				<button class="skills-grid-item1 flex flex-col w-full border-2 border-text hover:bg-text hover:text-bg text-left transition p-10">
+					<div class="skill-number text-[130px] leading-[130px]">01</div>
+					<div class="subtitle2 md:subtitle1 mb-5 md:mb-0">UI/UX Design</div>
+					<div class="subtitle3">Figma, Blender</div>
+				</button>
+				<button class="skills-grid-item2 flex flex-col w-full border-2 border-text hover:bg-text hover:text-bg text-left transition p-10">
+					<div class="skill-number text-[130px] leading-[130px]">02</div>
+					<div class="subtitle2 md:subtitle1 mb-5 md:mb-0">Web Dev</div>
+					<div class="subtitle3">Django, Astro, React, Tailwind CSS, JavaScript, Python, C, C++, PostgreSQL, MySQL</div>
+				</button>
+				<button class="skills-grid-item3 flex flex-col w-full border-2 border-text hover:bg-text hover:text-bg text-left transition p-10">
+					<div class="skill-number text-[130px] leading-[130px]">03</div>
+					<div class="subtitle2 md:subtitle1 mb-5 md:mb-0">Management</div>
+					<div class="subtitle3">Trello, Notion</div>
+				</button>
+				<button class="skills-grid-item4 flex flex-col w-full border-2 border-text hover:bg-text hover:text-bg text-left transition p-10">
+					<div class="skill-number text-[130px] leading-[130px]">04</div>
+					<div class="subtitle2 md:subtitle1 mb-5 md:mb-0">3D Modeling</div>
+					<div class="subtitle3">Blender, Unreal Engine</div>
+				</button>
+			</div>
+		</div>
+	</div>
+	
+	<!-- ---------------------------------------------------------------------------------------------------------------------------------------
+	skills details
+	--------------------------------------------------------------------------------------------------------------------------------------- -->
+	
+	<div class="skills-details-container mb-20 w-full flex flex-col gap-5">
+		<div class="wrapper p-5 md:p-0 md:max-w-[1000px] mx-auto">
+			<div class="skill-detail1 w-full text-left pt-10">
+				<div class="skill-number subtitle1">UI/UX Design</div>
+				<div class="subtitle2">My passion mostly lies in designing. I love making things prettier and user-friendly. My comfort zone is websites. But I have also worked on apps as well.</div>
+			</div>
+			<div class="skill-detail2 w-full text-left pt-10">
+				<div class="skill-number subtitle1">Web Dev</div>
+				<div class="subtitle2">As a computer science and engineering student, I have a lot of time spent on programming. I learned web development near the end of my engineering journey and have been doing it ever since.</div>
+			</div>
+			<div class="skill-detail3 w-full text-left pt-10">
+				<div class="skill-number subtitle1">Management</div>
+				<div class="subtitle2">Through the completion of various types of projects, I have worked under many good leaders and studied their management skills. Thus, I would like to believe I am a decent project manager myself.</div>
+			</div>
+			<div class="skill-detail4 w-full text-left pt-10">
+				<div class="skill-number subtitle1">3D Modeling</div>
+				<div class="subtitle2">Learning 3D modeling was daunting while game developing. But it turned out to be a really important skill that opened up a lot of new pathways.</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- ---------------------------------------------------------------------------------------------------------------------------------------
+	designs
+	--------------------------------------------------------------------------------------------------------------------------------------- -->
+	
+	<div class="designs-container mb-20">
+		<div class="title w-fit relative mx-auto">
+			<div class="title text-center">designs</div>
+			<div class="text-underline w-full h-[2px] bg-text absolute top-44"></div>
+		</div>
+		<div class="wrapper w-[100svw] px-5 md:px-0 md:max-w-[1200px] mx-auto overflow-hidden relative">
+			<div id="designs-cards-container" class="designs-cards-container w-max flex gap-3 transition">
+
+				<a class="design-card w-[80svw] md:w-[500px] transition rounded-t-full border-2 border-text overflow-hidden relative" target="_blank" href="https://www.behance.net/gallery/187675127/Pharmagic">
+					<div class="card-link-container absolute top-0 left-0 opacity-0 rounded-t-full invisible bg-text text-bg w-full h-full flex justify-center items-center subtitle1">go to page <iconify-icon class="subtitle2 ml-3" icon="pajamas:link"></iconify-icon></div>
+					<img class="w-full h-[300px] md:h-[400px] object-cover mb-5" src="pharmagic.png" alt="">
+					<div class="p-5">
+						<div class="skill-title subtitle1">Pharmagic</div>
+						<div class="skill-subtitle subtitle3">The design of Pharmagic, an imaginary pharmaceutical company.</div>
+					</div>
+				</a>
+				<a class="design-card w-[80svw] md:w-[500px] transition rounded-t-full border-2 border-text overflow-hidden relative" target="_blank" href="https://www.figma.com/file/PSljxJf0qNc3ujvrY7c2km/CDMB-%E2%80%A2-Portfoio?type=design&node-id=0-1&mode=design&t=Pc9rnD653PEsYOsY-0">
+					<div class="card-link-container absolute top-0 left-0 opacity-0 rounded-t-full invisible bg-text text-bg w-full h-full flex justify-center items-center subtitle1">go to page <iconify-icon class="subtitle2 ml-3" icon="pajamas:link"></iconify-icon></div>
+					<img class="w-full h-[300px] md:h-[400px] object-cover mb-5" src="cdmb.png" alt="">
+					<div class="p-5">
+						<div class="skill-title subtitle1">CDMB</div>
+						<div class="skill-subtitle subtitle3">The design section of a CDMB's website.</div>
+					</div>
+				</a>
+				<a class="design-card w-[80svw] md:w-[500px] transition rounded-t-full border-2 border-text overflow-hidden relative" target="_blank" href="https://www.figma.com/file/L9urx81pIbsbTe1qDP6ChB/Lecture-Hall-%E2%80%A2-Portfoio?type=design&node-id=1-21&mode=design&t=9sAcaL5pHHAx732O-0">
+					<div class="card-link-container absolute top-0 left-0 opacity-0 rounded-t-full invisible bg-text text-bg w-full h-full flex justify-center items-center subtitle1">go to page <iconify-icon class="subtitle2 ml-3" icon="pajamas:link"></iconify-icon></div>
+					<img class="w-full h-[300px] md:h-[400px] object-cover mb-5" src="lecture hall.png" alt="">
+					<div class="p-5">
+						<div class="skill-title subtitle1">Lecture Hall</div>
+						<div class="skill-subtitle subtitle3">Got a platform where Islamic scholars would share their knowledge with the world? Well I have the perfect design for you!</div>
+					</div>
+				</a>
+				<a class="design-card w-[80svw] md:w-[500px] transition rounded-t-full border-2 border-text overflow-hidden relative" target="_blank" href="https://www.figma.com/file/DpOxrAzEKDHoICth0Zz5Sg/Coloria-%E2%80%A2-Portfoio?type=design&node-id=1-5&mode=design&t=TewxyTvY1q4r80tM-0">
+					<div class="card-link-container absolute top-0 left-0 opacity-0 rounded-t-full invisible bg-text text-bg w-full h-full flex justify-center items-center subtitle1">go to page <iconify-icon class="subtitle2 ml-3" icon="pajamas:link"></iconify-icon></div>
+					<img class="w-full h-[300px] md:h-[400px] object-cover mb-5" src="coloria.png" alt="">
+					<div class="p-5">
+						<div class="skill-title subtitle1">Coloria</div>
+						<div class="skill-subtitle subtitle3">A website where you could upload your CT scan directly or manually input related data for a machine learning algorithm to predict whether or not you have Colera.</div>
+					</div>
+				</a>
+				<a class="design-card w-[80svw] md:w-[500px] transition rounded-t-full border-2 border-text overflow-hidden relative" target="_blank" href="https://www.figma.com/file/eqcvNSdcIjCrIJguphn8zW/Innovative-Tech-%E2%80%A2-Portfoio?type=design&node-id=0-3&mode=design&t=gkDEF4D9ZC1JU5nA-0">
+					<div class="card-link-container absolute top-0 left-0 opacity-0 rounded-t-full invisible bg-text text-bg w-full h-full flex justify-center items-center subtitle1">go to page <iconify-icon class="subtitle2 ml-3" icon="pajamas:link"></iconify-icon></div>
+					<img class="w-full h-[300px] md:h-[400px] object-cover mb-5" src="innovative tech.png" alt="">
+					<div class="p-5">
+						<div class="skill-title subtitle1">Innovative Tech</div>
+						<div class="skill-subtitle subtitle3">A design for a tech company that focuses on image processing.</div>
+					</div>
+				</a>
+				<a class="design-card w-[80svw] md:w-[500px] transition rounded-t-full border-2 border-text overflow-hidden relative" target="_blank" href="https://www.figma.com/file/3N0CRmYe0pu6ziucm7ZEnS/Socially-%E2%80%A2-Portfoio?type=design&node-id=0-1&mode=design&t=Z7RR5gybyOghF759-0">
+					<div class="card-link-container absolute top-0 left-0 opacity-0 rounded-t-full invisible bg-text text-bg w-full h-full flex justify-center items-center subtitle1">go to page <iconify-icon class="subtitle2 ml-3" icon="pajamas:link"></iconify-icon></div>
+					<img class="w-full h-[300px] md:h-[400px] object-cover mb-5" src="socially.png" alt="">
+					<div class="p-5">
+						<div class="skill-title subtitle1">Socially</div>
+						<div class="skill-subtitle subtitle3">The design of a social media management web service.</div>
+					</div>
+				</a>
+				<a class="design-card w-[80svw] md:w-[500px] transition rounded-t-full border-2 border-text overflow-hidden relative" target="_blank" href="https://www.figma.com/file/gt5mL1TUnhqfiwwlMl0XeM/Mushies-%E2%80%A2-Portfoio?type=design&node-id=0-3&mode=design&t=r1lfGhrZKMdT8XoQ-0">
+					<div class="card-link-container absolute top-0 left-0 opacity-0 rounded-t-full invisible bg-text text-bg w-full h-full flex justify-center items-center subtitle1">go to page <iconify-icon class="subtitle2 ml-3" icon="pajamas:link"></iconify-icon></div>
+					<img class="w-full h-[300px] md:h-[400px] object-cover mb-5" src="mushies.png" alt="">
+					<div class="p-5">
+						<div class="skill-title subtitle1">Mushies</div>
+						<div class="skill-subtitle subtitle3">The project charter of Mushies, an imaginary mushroom supplier.</div>
+					</div>
+				</a>
+				<a class="design-card w-[80svw] md:w-[500px] transition rounded-t-full border-2 border-text overflow-hidden relative" target="_blank" href="https://www.figma.com/file/SEDflDxSeasOj9URZ3DJ1k/Utshob-%E2%80%A2-Portfoio?type=design&node-id=1-2&mode=design&t=vTH4NUMYjuNzhuTN-0">
+					<div class="card-link-container absolute top-0 left-0 opacity-0 rounded-t-full invisible bg-text text-bg w-full h-full flex justify-center items-center subtitle1">go to page <iconify-icon class="subtitle2 ml-3" icon="pajamas:link"></iconify-icon></div>
+					<img class="w-full h-[300px] md:h-[400px] object-cover mb-5" src="utshob.png" alt="">
+					<div class="p-5">
+						<div class="skill-title subtitle1">Utshob</div>
+						<div class="skill-subtitle subtitle3">Just a pattern design I made, wanted to include this one too!</div>
+					</div>
+				</a>
+				
+			</div>
+			<!-- <button class="btn-design-left absolute z-[1] left-5 top-1/2 bottom-1/2 bg-bg active:translate-y-1 active:scale-95 border-2 border-text opacity-30 text-gray-800 rounded-full w-16 h-16 flex justify-center items-center text-3xl transition-opacity"><iconify-icon icon="carbon:arrow-left"></iconify-icon></button>
+			<button class="btn-design-right absolute z-[1] right-5 top-1/2 bottom-1/2 bg-bg active:translate-y-1 active:scale-95 border-2 border-text text-gray-800 rounded-full w-16 h-16 flex justify-center items-center text-3xl transition-opacity"><iconify-icon icon="carbon:arrow-right"></iconify-icon></button> -->
+			<div class="design-buttton-container w-full py-3 flex justify-end gap-3 mt-3">
+				<button class="btn-design-left active:translate-y-1 active:scale-95 border-2 border-text opacity-30 text-gray-800 rounded-full w-16 h-16 flex justify-center items-center text-3xl transition-opacity"><iconify-icon icon="carbon:arrow-left"></iconify-icon></button>
+				<button class="btn-design-right active:translate-y-1 active:scale-95 border-2 border-text text-gray-800 rounded-full w-16 h-16 flex justify-center items-center text-3xl transition-opacity"><iconify-icon icon="carbon:arrow-right"></iconify-icon></button>
+			</div>
+			
+		</div>
+	</div>
+
+	<!-- ---------------------------------------------------------------------------------------------------------------------------------------
+	works
+	--------------------------------------------------------------------------------------------------------------------------------------- -->
+	
+	<div class="works-container mb-20">
+		<div class="title w-fit relative mx-auto">
+			<div class="title text-center">works</div>
+			<div class="text-underline w-full h-[2px] bg-text absolute top-44"></div>
+		</div>
+		<div class="wrapper w-[100svw] p-5 md:p-0 md:max-w-[1200px] mx-auto overflow-hidden">
+			<div id="works-cards-container" class="works-cards-container w-max flex gap-3 transition">
+
+				<a class="work-card w-[85svw] md:w-[475px] p-5 border-2 border-text overflow-hidden relative" target="_blank" href="https://cdmb.edu.bd/">
+					<div class="card-link-container absolute top-0 left-0 opacity-0 invisible bg-text text-bg w-full h-full flex justify-center items-center subtitle1">go to page <iconify-icon class="subtitle2 ml-3" icon="pajamas:link"></iconify-icon></div>
+					<!-- <img class="w-full h-[300px] object-cover mb-5" src="pharmagic.jpg" alt=""> -->
+					<div class="skill-title subtitle1">CDMB <iconify-icon class="subtitle2" icon="pajamas:link"></iconify-icon></div>
+					<div class="skill-subtitle subtitle3">This is the complete website of CDMB done with django. It got a few additions and subtractions from the original design though.</div>
+				</a>
+				<a class="work-card w-[85svw] md:w-[475px] p-5 border-2 border-text overflow-hidden relative" target="_blank" href="https://github.com/Iftekhar16/Meals-themealdb">
+					<div class="card-link-container absolute top-0 left-0 opacity-0 invisible bg-text text-bg w-full h-full flex justify-center items-center subtitle1">go to page <iconify-icon class="subtitle2 ml-3" icon="pajamas:link"></iconify-icon></div>
+					<!-- <img class="w-full h-[300px] object-cover mb-5" src="pharmagic.jpg" alt=""> -->
+					<div class="skill-title subtitle1">Meals-Themealsdb <iconify-icon class="subtitle2" icon="pajamas:link"></iconify-icon></div>
+					<div class="skill-subtitle subtitle3">A website that fetches data from themealdb's api to show its various information using HTML, CSS, Tailwind and JavaScript</div>
+				</a>
+				<a class="work-card w-[85svw] md:w-[475px] p-5 border-2 border-text overflow-hidden relative" target="_blank" href="https://github.com/Iftekhar16/OnlineFitnessStore">
+					<div class="card-link-container absolute top-0 left-0 opacity-0 invisible bg-text text-bg w-full h-full flex justify-center items-center subtitle1">go to page <iconify-icon class="subtitle2 ml-3" icon="pajamas:link"></iconify-icon></div>
+					<!-- <img class="w-full h-[300px] object-cover mb-5" src="pharmagic.jpg" alt=""> -->
+					<div class="skill-title subtitle1">Online Fitness Store <iconify-icon class="subtitle2" icon="pajamas:link"></iconify-icon></div>
+					<div class="skill-subtitle subtitle3">A front-end template for an online fitness store using Django, HTML, CSS, Tailwind and JavaScript.</div>
+				</a>
+				<a class="work-card w-[85svw] md:w-[475px] p-5 border-2 border-text overflow-hidden relative" target="_blank" href="https://github.com/Iftekhar16/Dark-Triad-Detection">
+					<div class="card-link-container absolute top-0 left-0 opacity-0 invisible bg-text text-bg w-full h-full flex justify-center items-center subtitle1">go to page <iconify-icon class="subtitle2 ml-3" icon="pajamas:link"></iconify-icon></div>
+					<!-- <img class="w-full h-[300px] object-cover mb-5" src="pharmagic.jpg" alt=""> -->
+					<div class="skill-title subtitle1">Dark Triad Detection Using Machine Learning <iconify-icon class="subtitle2" icon="pajamas:link"></iconify-icon></div>
+					<div class="skill-subtitle subtitle3">A machine learning project implemented in python that can detect whether a person has Machiavellian, Narcissistic, or Psychopathic traits in their personality through some questionnaires</div>
+				</a>
+				
+				
+			</div>
+			<div class="work-buttton-container w-full py-3 flex justify-end gap-3 mt-3">
+				<button class="btn-work-left active:translate-y-1 active:scale-95 border-2 border-text opacity-30 text-gray-800 rounded-full w-16 h-16 flex justify-center items-center text-3xl transition-opacity"><iconify-icon icon="carbon:arrow-left"></iconify-icon></button>
+				<button class="btn-work-right active:translate-y-1 active:scale-95 border-2 border-text text-gray-800 rounded-full w-16 h-16 flex justify-center items-center text-3xl transition-opacity"><iconify-icon icon="carbon:arrow-right"></iconify-icon></button>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	<!-- ---------------------------------------------------------------------------------------------------------------------------------------
+	contact
+	--------------------------------------------------------------------------------------------------------------------------------------- -->
+
+	<div class="contact-container md:h-[100svh] flex flex-col justify-center">
+		<div class="title w-fit relative mx-auto">
+			<div class="text title text-center">reach out</div>
+			<div class="text-underline w-full h-[2px] bg-text absolute top-44"></div>
+		</div>
+
+		<div class="wrapper p-5 md:p-0 md:max-w-[1200px] mx-auto">
+			<div class="contact-description subtitle2">
+
+				<div class="md:flex hidden gap-10">
+					<div class="left flex flex-col gap-5">
+
+						<div class="flex items-center gap-3">
+							<div class="star-container stroke-[5] fill-text w-8 h-8">
+								<svg  stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+							</div>
+							<div class="">Email</div>
+						</div>
+						
+						<div class="flex items-center gap-3">
+							<div class="star-container stroke-[5] fill-text w-8 h-8">
+								<svg  stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+							</div>
+							<div class="">Phone</div>
+						</div>
+
+						<div class="flex items-center gap-3">
+							<div class="star-container stroke-[5] fill-text w-8 h-8">
+								<svg  stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+							</div>
+							<div class="">Behance</div>
+						</div>
+
+						<div class="flex items-center gap-3">
+							<div class="star-container stroke-[5] fill-text w-8 h-8">
+								<svg  stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+							</div>
+							<div class="">Github</div>
+						</div>
+						
+						<div class="flex items-center gap-3">
+							<div class="star-container stroke-[5] fill-text w-8 h-8">
+								<svg  stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+							</div>
+							<div class="">Facebook</div>
+						</div>
+						
+					</div>
+					
+					<div class="right flex flex-col gap-5">
+						
+						<a href="mailto:iftekharhossain16@gmail.com" class="underline" target="_blank">iftekharhossain16@gmail.com</a>
+						
+						<div class="">01751985620</div>
+						
+						<a href="https://www.behance.net/iftekharhossain9" class="underline" target="_blank">behance.net/iftekharhossain9</a>
+
+						<a href="https://github.com/Iftekhar16?tab=repositories" class="underline" target="_blank">github.com/Iftekhar16</a>
+						
+						<a href="facebook.com/I.hossain16" class="underline" target="_blank">facebook.com/I.hossain16</a>
+
+					</div>
+
+				</div>
+
+				<!-- ----- -->
+				<div class="block md:hidden">
+					<div class="w-52 flex items-center gap-2">
+						<div class="star-container stroke-[5] fill-text w-8 h-8">
+							<svg  stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+						</div>
+						<div class="subtitle1">Email</div>
+					</div>
+					<a href="mailto:iftekharhossain16@gmail.com" class="subtitle-2 block underline mb-5">iftekharhossain16@gmail.com</a>
+					
+					<div class="w-52 flex items-center gap-2">
+						<div class="star-container stroke-[5] fill-text w-8 h-8">
+							<svg  stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+						</div>
+						<div class="subtitle1">Phone</div>
+					</div>
+					<div class="subtitle-2 mb-5">01751985620</div>
+					
+					<div class="w-52 flex items-center gap-2">
+						<div class="star-container stroke-[5] fill-text w-8 h-8">
+							<svg  stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+						</div>
+						<div class="subtitle1">Behance</div>
+					</div>
+					<a href="https://www.behance.net/iftekharhossain9" class="subtitle-2 block underline mb-5">behance.net/iftekharhossain9</a>
+
+					<div class="w-52 flex items-center gap-2">
+						<div class="star-container stroke-[5] fill-text w-8 h-8">
+							<svg  stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+						</div>
+						<div class="subtitle1">Github</div>
+					</div>
+					<a href="https://github.com/Iftekhar16?tab=repositories" class="subtitle-2 block underline mb-5">github.com/Iftekhar16</a>
+
+					<div class="w-52 flex items-center gap-2">
+						<div class="star-container stroke-[5] fill-text w-8 h-8">
+							<svg  stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+						</div>
+						<div class="subtitle1">Facebook</div>
+					</div>
+					<a href="facebook.com/I.hossain16" class="subtitle-2 block underline mb-5">facebook.com/I.hossain16</a>
+
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="ending-divider flex justify-center items-center gap-5 h-20 mx-auto">
+		<div class="line h-[1px] w-[50px] md:w-[150px] bg-text"></div>
+		<div class="star-container stroke-[10] fill-text w-6 h-6">
+			<svg stroke="#2A2A2A" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+		</div>
+		<div class="star-container w-10 h-10">
+			<svg stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+		</div>
+		<div class="star-container stroke-[10] fill-text w-6 h-6">
+			<svg stroke="#2A2A2A" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+		</div>
+		<div class="line h-[1px] w-[50px] md:w-[150px] bg-text"></div>
+	</div>
+
+
+	<script>
+		import "../js/scripts.js";
+	</script>
+
+</body>

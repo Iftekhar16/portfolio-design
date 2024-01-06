@@ -1,0 +1,616 @@
+---
+// import '../css/style.css';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- favicon -->
+    <link href="favicon-light.png" rel="icon" media="(prefers-color-scheme: light)"/>
+    <link href="favicon-dark.png" rel="icon" media="(prefers-color-scheme: dark)"/>
+	<!-- iconify -->
+	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+	<title>Hi!</title>
+</head>
+
+<style>
+    @font-face{
+        font-family: 'fogthree';
+        src: url(Fogthree.ttf);
+    }
+
+    body{
+        font-family: 'fogthree';
+    }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 0.4rem;
+        /* width: 0rem; */
+        /* height: 0.3rem; */
+    }
+
+    /* .scrollable-div::-webkit-scrollbar {
+        position: absolute;
+        right: 5rem;
+        margin-left: 5rem;
+    } */
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: rgba(47, 49, 53, 0);
+        /* background: rgb(17, 24, 39); */
+        /* border-radius: 10px; */
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #2A2A2A;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #505050;
+    }
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	:root {
+		--bg: #EAEAEA;
+		--text: #2A2A2A;
+	}
+
+
+	/* sm */
+	.title{
+		font-size: 70px;
+		line-height: 250px;
+	}
+	.subtitle1{
+		font-size: 40px;
+		line-height: 60px;
+	}
+	.subtitle2{
+		font-size: 30px;
+		line-height: 40px;
+	}
+	.subtitle3{
+		font-size: 25px;
+		line-height: 30px;
+	}
+	
+	/* md */
+	@media (min-width: 768px) {
+		.title{
+			font-size: 150px;
+			line-height: 250px;
+		}
+		.subtitle1{
+			font-size: 50px;
+			line-height: 60px;
+		}
+		.subtitle2{
+			font-size: 30px;
+			line-height: 40px;
+		}
+		.subtitle3{
+			font-size: 20px;
+			line-height: 30px;
+		}
+	}
+	/* lg */
+	@media (min-width: 1024px) {
+		.title{
+			font-size: 150px;
+			line-height: 250px;
+		}
+		.subtitle1{
+			font-size: 50px;
+			line-height: 60px;
+		}
+		.subtitle2{
+			font-size: 30px;
+			line-height: 40px;
+		}
+		.subtitle3{
+			font-size: 20px;
+			line-height: 30px;
+		}
+	}
+</style>
+
+<body class="body bg-bg text-text h-[100svh] overflow-hidden">
+
+
+	<div class="loader-container text-[150px] leading-[150px] w-[100svw] h-[100svh] fixed top-0 bg-bg flex flex-col justify-center items-center z-50">
+		<div class="text-upper w-52 flex items-center gap-2">
+			<div class="">L</div>
+			<div class="loader-svg">
+				<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" fill="none">
+					<circle cx="103.508" cy="62.008" r="16.0827" transform="rotate(90 103.508 62.008)" fill="#2A2A2A"/>
+					<circle cx="87.2876" cy="95.7158" r="16.0827" transform="rotate(141.25 87.2876 95.7158)" fill="#2A2A2A"/>
+					<circle cx="50.612" cy="104.029" r="16.0827" transform="rotate(-167.015 50.612 104.029)" fill="#2A2A2A"/>
+					<circle cx="21.4662" cy="80.6382" r="16.0827" transform="rotate(-115.7 21.4662 80.6382)" fill="#2A2A2A"/>
+					<circle cx="21.6179" cy="43.0645" r="16.0827" transform="rotate(-63.8741 21.6179 43.0645)" fill="#2A2A2A"/>
+					<circle cx="50.824" cy="19.938" r="16.0827" transform="rotate(-12.5483 50.824 19.938)" fill="#2A2A2A"/>
+					<circle cx="87.5463" cy="28.5082" r="16.0827" transform="rotate(39.1669 87.5463 28.5082)" fill="#2A2A2A"/>
+				</svg>
+			</div>
+		</div>
+		<div class="text-lower w-52">AD<br>ING</div>
+	</div>
+
+	<style>
+		@keyframes loaderRotate{
+			0%{
+				rotate: 0deg;
+			}
+			100%{
+				rotate:360deg;
+			}
+		}
+		.loader-svg{
+			animation: loaderRotate 3s infinite linear;
+		}
+		.loader-container{
+			/* transition-property: translate;
+			transition-duration: 1s;
+			transition-timing-function: ease-in-out; */
+			transition: 1s ease-in-out;
+		}
+	</style>
+
+	<script>
+		var body = document.querySelector('.body');
+		var loaderContainer = document.querySelector('.loader-container');
+		document.addEventListener("DOMContentLoaded", function() {
+			setTimeout(function(){
+				// document.querySelector('.skills-container').scrollIntoView(false);
+				body.scrollIntoView({ inline: "start"});
+				loaderContainer.style.transform = "translateY(200%)";
+				body.style.overflow = "auto";
+				body.style.height = "auto";
+			});
+		});
+	</script>
+
+	<div class="hero-container h-[50svh] md:h-[100svh] ">
+
+		<div class="wrapper max-w-[800px] md:max-w-[1200px] mx-auto h-[50svh] md:h-[100svh] flex flex-col justify-center items-center relative">
+			<!-- <div class="blobs-container absolute w-full h-[200svh] flex justify-center items-center overflow-x-hidden"> -->
+			<div class="blobs-container absolute w-full h-[200svh] flex justify-center items-center overflow-x-hidden blur-[100px]">
+				<div class="blobRotate1 blob1 absolute left-0 w-[700px] h-[400px] rounded-full bg-[#E85CFF] opacity-50"></div>
+				<div class="blobRotate2 blob2 absolute right-0 w-[700px] h-[400px] rounded-full bg-[#E85CFF] opacity-50"></div>
+				<div class="blobRotate3 blob3 absolute w-[500px] h-[500px] rounded-xl bg-[#ff7081] opacity-50"></div>
+			</div>
+
+			<!-- <div class="blobs-container absolute w-full h-screen bg-green-300 flex items-center justify-center">
+				<div class="blob1 absolute w-72 h-96 bg-[#FF808FB2] left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+			</div> -->
+
+
+			<style>
+				@keyframes blobRotate1{
+					0%{
+						transform: rotate(0);
+						scale: 50%;
+					}
+					50%{
+						/* transform: rotate(360deg); */
+						scale: 70%;
+					}
+					100%{
+						transform: rotate(360deg);
+						scale: 50%;
+					}
+				}
+				.blobRotate1{
+					animation: blobRotate1 10s infinite linear;
+				}
+				@keyframes blobRotate2{
+					0%{
+						transform: rotate(0);
+						scale: 50%;
+					}
+					50%{
+						/* transform: rotate(360deg); */
+						scale: 70%;
+					}
+					100%{
+						transform: rotate(360deg);
+						scale: 50%;
+					}
+				}
+				.blobRotate2{
+					animation: blobRotate2 5s infinite ease;
+				}
+				@keyframes blobRotate3{
+					0%{
+						transform: rotate(0);
+						scale: 70%;
+					}
+					50%{
+						transform: rotate(360deg);
+						scale: 100%;
+					}
+					100%{
+						transform: rotate(0);
+						scale: 70%;
+					}
+				}
+				.blobRotate3{
+					animation: blobRotate3 7s infinite ease-in-out;
+				}
+				
+			</style>
+
+			
+
+
+			<div class="relative">
+
+				<div class="flex items-center justify-center gap-3">
+					<div class="line h-[2px] w-full bg-text"></div>
+					<div class="subtitle1">muhammad</div>
+					<div class="line h-[2px] w-full bg-text"></div>
+				</div>
+
+				<div class="text-[150px] leading-[130px] mb-5">Iftekhar Hossain</div>
+				<div class="hero-btn-container w-full flex justify-center">
+					<button class="btn-hero text-[30px] border-text hover:bg-text hover:text-bg transition border-2 px-5 h-16 flex justify-center items-center">get in touch</button>
+				</div>
+
+				<div class="star-container stroke-[7] md:stroke-2 w-10 md:w-32 h-10 md:h-32 absolute -top-20 -left-28">
+					<svg  stroke="#2A2A2A" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+				</div>
+				<div class="star-container stroke-[7] md:stroke-2 w-14 h-14 md:w-48 md:h-48 absolute -bottom-10 -right-36">
+					<svg  stroke="#2A2A2A" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+				</div>
+
+				<script>
+					var btnHero = document.querySelector('.btn-hero');
+					var contactContainer = document.querySelector('.contact-container');
+					btnHero.addEventListener("click",()=>{
+						contactContainer.scrollIntoView({ inline: "start", behavior: "smooth"}); 
+					});
+				</script>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="about-container mb-32">
+		<div class="wrapper max-w-[1200px] mx-auto">
+			<div class="title w-fit relative">
+				<div class="title">about me</div>
+				<div class="text-underline w-full h-[2px] bg-text absolute top-44"></div>
+			</div>
+			<div class="about-description-container w-full flex justify-end">
+				<div class="subtitle2 text-right w-[70%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minus dignissimos sed. Eos, ducimus mollitia? Doloribus recusandae, inventore, tenetur eveniet quisquam architecto minus, hic dolorum qui atque odit quibusdam sint.</div>
+				<!-- <div class="about-description text-right text-[30px] leading-[60px] w-[70%]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus minus dignissimos sed. Eos, ducimus mollitia? Doloribus recusandae, inventore, tenetur eveniet quisquam architecto minus, hic dolorum qui atque odit quibusdam sint.</div> -->
+			</div>
+		</div>
+	</div>
+
+
+	<div class="skills-container mb-32">
+		<div class="wrapper max-w-[1200px] mx-auto flex justify-between gap-20">
+			<div class="skills-grid-container w-full grid grid-cols-2 gap-3">
+				<button class="skills-grid-item1 w-full border-2 border-text hover:bg-text hover:text-bg text-left transition p-10">
+					<div class="skill-number text-[130px] leading-[130px]">01</div>
+					<div class="subtitle1">UI/UX Design</div>
+					<div class="subtitle3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+				</button>
+				<button class="skills-grid-item2 w-full border-2 border-text hover:bg-text hover:text-bg text-left transition p-10">
+					<div class="skill-number text-[130px] leading-[130px]">02</div>
+					<div class="subtitle1">Web Dev</div>
+					<div class="subtitle3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+				</button>
+				<button class="skills-grid-item3 w-full border-2 border-text hover:bg-text hover:text-bg text-left transition p-10">
+					<div class="skill-number text-[130px] leading-[130px]">03</div>
+					<div class="subtitle1">Management</div>
+					<div class="subtitle3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+				</button>
+				<button class="skills-grid-item4 w-full border-2 border-text hover:bg-text hover:text-bg text-left transition p-10">
+					<div class="skill-number text-[130px] leading-[130px]">04</div>
+					<div class="subtitle1">3D Modeling</div>
+					<div class="subtitle3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+				</button>
+			</div>
+			<div class="title w-fit relative">
+				<div class="text title">skills</div>
+				<div class="text-underline w-full h-[2px] bg-black absolute top-44"></div>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="skills-details-container mb-32 w-full flex flex-col gap-5">
+		<div class="wrapper max-w-[1000px] mx-auto">
+			<div class="skill-detail1 w-full text-left pt-10">
+				<div class="skill-number subtitle1">UI/UX Design</div>
+				<div class="subtitle2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+			</div>
+			<div class="skill-detail2 w-full text-left pt-10">
+				<div class="skill-number subtitle1">Web Dev</div>
+				<div class="subtitle2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+			</div>
+			<div class="skill-detail3 w-full text-left pt-10">
+				<div class="skill-number subtitle1">Management</div>
+				<div class="subtitle2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+			</div>
+			<div class="skill-detail4 w-full text-left pt-10">
+				<div class="skill-number subtitle1">3D Modeling</div>
+				<div class="subtitle2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		document.querySelector('.skills-grid-item1').addEventListener("click",()=>{
+			document.querySelector('.skill-detail1').scrollIntoView({ block: "start", behavior: "smooth"}); 
+		});
+		document.querySelector('.skills-grid-item2').addEventListener("click",()=>{
+			document.querySelector('.skill-detail2').scrollIntoView({ block: "start", behavior: "smooth"}); 
+		});
+		document.querySelector('.skills-grid-item3').addEventListener("click",()=>{
+			document.querySelector('.skill-detail3').scrollIntoView({ block: "start", behavior: "smooth"}); 
+		});
+		document.querySelector('.skills-grid-item4').addEventListener("click",()=>{
+			document.querySelector('.skill-detail4').scrollIntoView({ block: "start", behavior: "smooth"}); 
+		});
+	</script>
+
+
+	<div class="works-container mb-32">
+		<div class="title w-fit relative mx-auto">
+			<div class="title text-center">works</div>
+			<div class="text-underline w-full h-[2px] bg-text absolute top-44"></div>
+		</div>
+		<div class="wrapper max-w-[1200px] mx-auto overflow-hidden">
+			<div id="works-cards-container" class="works-cards-container w-max flex gap-3 transition">
+
+				<div class="work-card w-[500px] p-5 border-2 border-text overflow-hidden">
+					<img class="w-full object-cover mb-5" src="pharmagic.jpg" alt="">
+					<div class="skill-title subtitle1">Web Dev</div>
+					<div class="skill-subtitle subtitle3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+				</div>
+				<div class="work-card w-[500px] p-5 border-2 border-text overflow-hidden">
+					<img class="w-full object-cover mb-5" src="pharmagic.jpg" alt="">
+					<div class="skill-title subtitle1">Web Dev</div>
+					<div class="skill-subtitle subtitle3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+				</div>
+				<div class="work-card w-[500px] p-5 border-2 border-text overflow-hidden">
+					<img class="w-full object-cover mb-5" src="pharmagic.jpg" alt="">
+					<div class="skill-title subtitle1">Web Dev</div>
+					<div class="skill-subtitle subtitle3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+				</div>
+				<div class="work-card w-[500px] p-5 border-2 border-text overflow-hidden">
+					<img class="w-full object-cover mb-5" src="pharmagic.jpg" alt="">
+					<div class="skill-title subtitle1">Web Dev</div>
+					<div class="skill-subtitle subtitle3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+				</div>
+				
+			</div>
+			<div class="work-buttton-container w-full py-3 flex justify-end gap-3 mt-3">
+				<button class="btn-work-left active:translate-y-1 active:scale-95 border-2 border-text opacity-30 text-gray-800 rounded-full w-16 h-16 flex justify-center items-center text-3xl transition-opacity"><iconify-icon icon="carbon:arrow-left"></iconify-icon></button>
+				<button class="btn-work-right active:translate-y-1 active:scale-95 border-2 border-text text-gray-800 rounded-full w-16 h-16 flex justify-center items-center text-3xl transition-opacity"><iconify-icon icon="carbon:arrow-right"></iconify-icon></button>
+			</div>
+			<style>
+				.works-cards-container{
+					transition: 0.7s;
+				}
+			</style>
+			<script>
+				var workLeft = document.querySelector('.btn-work-left');
+				var workRight = document.querySelector('.btn-work-right');
+				var workCardsContainer = document.getElementById('works-cards-container');
+				var translationValue = 0;
+				var inPosition = 1;
+				var workChildrenLength = workCardsContainer.children.length;
+				var workChildrenWidth = workCardsContainer.children[0].offsetWidth;
+
+				const workComputedStyle = window.getComputedStyle(workCardsContainer);
+				var workGap = parseInt(workComputedStyle.gap, 10);
+				
+				workLeft.addEventListener("click", () => {
+					if(inPosition>1){
+						workLeft.style.opacity = "100%";
+						translationValue += (workChildrenWidth+workGap);
+						workCardsContainer.style.transform = "translateX(" + translationValue + "px)";
+						inPosition--;
+						if(inPosition<=1){
+							workLeft.style.opacity = "30%";
+						}
+						if(inPosition<workChildrenLength){
+							workRight.style.opacity = "100%";
+						}
+					}
+				});
+				
+				workRight.addEventListener("click", () => {
+					if(inPosition<workChildrenLength){
+						translationValue -= (workChildrenWidth+workGap);
+						workCardsContainer.style.transform = "translateX(" + translationValue + "px)";
+						inPosition++;
+						if(inPosition>=workChildrenLength){
+							workRight.style.opacity = "30%";
+						}
+						if(inPosition>1){
+							workLeft.style.opacity = "100%";
+						}
+					}
+				});
+
+			</script>
+		</div>
+	</div>
+
+
+
+	
+	<div class="designs-container mb-32">
+		<div class="title w-fit relative mx-auto">
+			<div class="title text-center">designs</div>
+			<div class="text-underline w-full h-[2px] bg-text absolute top-44"></div>
+		</div>
+		<div class="wrapper px-5 md:px-0 md:max-w-[1200px] mx-auto overflow-hidden">
+			<div id="designs-cards-container" class="designs-cards-container bg-pink-500 w-[95svw] md:w-max flex gap-3 transition">
+
+				<div class="design-card  w-full md:w-[500px] rounded-t-full border-2 border-text overflow-hidden">
+					<img class="w-full h-[400px] object-cover mb-5" src="pharmagic.jpg" alt="">
+					<div class="p-5">
+						<div class="skill-title subtitle1">Web Dev</div>
+						<div class="skill-subtitle subtitle3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+					</div>
+				</div>
+				<div class="design-card w-[500px] rounded-t-full border-2 border-text overflow-hidden">
+					<img class="w-full h-[400px] object-cover mb-5" src="pharmagic.jpg" alt="">
+					<div class="p-5">
+						<div class="skill-title subtitle1">Web Dev</div>
+						<div class="skill-subtitle subtitle3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+					</div>
+				</div>
+				<div class="design-card w-[500px] rounded-t-full border-2 border-text overflow-hidden">
+					<img class="w-full h-[400px] object-cover mb-5" src="pharmagic.jpg" alt="">
+					<div class="p-5">
+						<div class="skill-title subtitle1">Web Dev</div>
+						<div class="skill-subtitle subtitle3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+					</div>
+				</div>
+				<div class="design-card w-[500px] rounded-t-full border-2 border-text overflow-hidden">
+					<img class="w-full h-[400px] object-cover mb-5" src="pharmagic.jpg" alt="">
+					<div class="p-5">
+						<div class="skill-title subtitle1">Web Dev</div>
+						<div class="skill-subtitle subtitle3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, tempora.</div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="design-buttton-container w-full py-3 flex justify-end gap-3 mt-3">
+				<button class="btn-design-left active:translate-y-1 active:scale-95 border-2 border-text opacity-30 text-gray-800 rounded-full w-16 h-16 flex justify-center items-center text-3xl transition-opacity"><iconify-icon icon="carbon:arrow-left"></iconify-icon></button>
+				<button class="btn-design-right active:translate-y-1 active:scale-95 border-2 border-text text-gray-800 rounded-full w-16 h-16 flex justify-center items-center text-3xl transition-opacity"><iconify-icon icon="carbon:arrow-right"></iconify-icon></button>
+			</div>
+			<style>
+				.designs-cards-container{
+					transition: 0.7s;
+				}
+			</style>
+			<script>
+				var designLeft = document.querySelector('.btn-design-left');
+				var designRight = document.querySelector('.btn-design-right');
+				var designCardsContainer = document.getElementById('designs-cards-container');
+				var translationValue = 0;
+				var inPosition = 1;
+				var designChildrenLength = designCardsContainer.children.length;
+				var designChildrenWidth = designCardsContainer.children[0].offsetWidth;
+
+				const designComputedStyle = window.getComputedStyle(designCardsContainer);
+				var designGap = parseInt(designComputedStyle.gap, 10);
+				
+				designLeft.addEventListener("click", () => {
+					if(inPosition>1){
+						designLeft.style.opacity = "100%";
+						translationValue += (designChildrenWidth+designGap);
+						designCardsContainer.style.transform = "translateX(" + translationValue + "px)";
+						inPosition--;
+						if(inPosition<=1){
+							designLeft.style.opacity = "30%";
+						}
+						if(inPosition<designChildrenLength){
+							designRight.style.opacity = "100%";
+						}
+					}
+				});
+				
+				designRight.addEventListener("click", () => {
+					if(inPosition<designChildrenLength){
+						translationValue -= (designChildrenWidth+designGap);
+						designCardsContainer.style.transform = "translateX(" + translationValue + "px)";
+						inPosition++;
+						if(inPosition>=designChildrenLength){
+							designRight.style.opacity = "30%";
+						}
+						if(inPosition>1){
+							designLeft.style.opacity = "100%";
+						}
+					}
+				});
+
+			</script>
+		</div>
+	</div>
+
+
+	<div class="contact-container h-[100svh] flex flex-col justify-center">
+		<div class="title w-fit relative mx-auto">
+			<div class="text title text-center">reach out</div>
+			<div class="text-underline w-full h-[2px] bg-text absolute top-44"></div>
+		</div>
+
+		<div class="wrapper max-w-[1200px] mx-auto">
+			<div class="contact-description subtitle2">
+
+				<div class="flex gap-10">
+					<div class="left flex flex-col gap-5">
+
+						<div class="flex items-center gap-2">
+							<div class="star-container stroke-[5] fill-text w-8 h-8">
+								<svg  stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+							</div>
+							<div class="">Email</div>
+						</div>
+						
+						<div class="flex items-center gap-2">
+							<div class="star-container stroke-[5] fill-text w-8 h-8">
+								<svg  stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+							</div>
+							<div class="">Phone</div>
+						</div>
+
+						<div class="flex items-center gap-2">
+							<div class="star-container stroke-[5] fill-text w-8 h-8">
+								<svg  stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+							</div>
+							<div class="">Facebook</div>
+						</div>
+
+					</div>
+
+					<div class="right flex flex-col gap-5">
+
+						<a href="mailto:iftekharhossain16@gmail.com" class="underline">iftekharhossain16@gmail.com</a>
+	
+						<div class="">01751985620</div>
+	
+						<a href="facebook.com/I.hossain16" class="underline">facebook.com/I.hossain16</a>
+
+					</div>
+
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+	<div class="ending-divider flex justify-center items-center gap-5 h-20 mx-auto">
+		<div class="line h-[1px] w-[150px] bg-text"></div>
+		<div class="star-container stroke-[10] fill-text w-6 h-6">
+			<svg stroke="#2A2A2A" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+		</div>
+		<div class="star-container w-10 h-10">
+			<svg stroke="#2A2A2A" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+		</div>
+		<div class="star-container stroke-[10] fill-text w-6 h-6">
+			<svg stroke="#2A2A2A" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M149.985 291.518C145.489 215.485 84.6641 154.637 8.73254 150.278C84.8481 145.908 145.785 84.7736 150.015 8.48343C154.51 84.5155 215.336 145.363 291.267 149.722C215.15 154.092 154.214 215.227 149.985 291.518Z"/> </svg>					
+		</div>
+		<div class="line h-[1px] w-[150px] bg-text"></div>
+	</div>
+
+</body>
+</html>
